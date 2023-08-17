@@ -43,6 +43,9 @@ class NewTaskSheet(var taskItem: TaskItem?) : BottomSheetDialogFragment() {
         binding.timePickerButton.setOnClickListener{
             openTimePicker()
         }
+
+
+
     }
 
     private fun openTimePicker() {
@@ -83,7 +86,13 @@ class NewTaskSheet(var taskItem: TaskItem?) : BottomSheetDialogFragment() {
 
         binding.name.setText("")
         binding.description.setText("")
-        dismiss()//close button fragment
+        dismiss()
+    }
+
+    private fun removeAction(){
+        //!! com isso estará garantindo que o valor não passado para a função não
+        //será nulo
+        taskViewModel.removeTaskItem(taskItem!!)
     }
 
 

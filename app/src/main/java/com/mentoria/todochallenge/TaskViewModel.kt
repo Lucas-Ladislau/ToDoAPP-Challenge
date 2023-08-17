@@ -21,6 +21,12 @@ class TaskViewModel : ViewModel(){
         tasksItems.postValue(list)
     }
 
+    fun removeTaskItem(taskItem: TaskItem){
+        var list = tasksItems.value
+        list!!.remove(taskItem)
+        tasksItems.postValue(list)
+    }
+
     fun updateTaskItem( id: UUID = UUID.randomUUID(), name: String, desc: String, time: LocalTime?){
         var list = tasksItems.value
         var task = list!!.find { it.id == id }!!

@@ -31,6 +31,10 @@ class TaskItemViewHolder(
             clickListener.editTaskItem(taskItem)
         }
 
+        binding.removeButton.setOnClickListener{
+            clickListener.removeTaskItem(taskItem)
+        }
+
 
 
         if(taskItem.time != null){

@@ -24,24 +24,41 @@
             android:layout_marginHorizontal="15dp"
             android:src="@drawable/unchecked_24"
             android:backgroundTint="@android:color/transparent"/>
-        
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@id/name"
             android:text="@string/place_holder"
             style="@style/TextAppearance.AppCompat.Title"
-            android:layout_gravity="center"
-            android:layout_weight="1" />
+            android:layout_gravity="center" />
 
         <TextView
-            android:layout_marginHorizontal="5dp"
+            android:id="@id/time"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@id/time"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="60dp"
             android:text="@string/place_holder"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_gravity="center"/>
+            android:textSize="15dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/removeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/remove"
+            android:src="@drawable/baseline_remove_circle_outline_24" />
+
 
     </LinearLayout>
 

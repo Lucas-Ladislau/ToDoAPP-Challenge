@@ -41,5 +41,9 @@ class MainActivity : AppCompatActivity(), TaskItemClickListener{
         taskViewModel.setComplete(taskItem)
     }
 
+    override fun removeTaskItem(taskItem: TaskItem) {
+        taskViewModel.removeTaskItem(taskItem)
+    }
+
 
 }
